@@ -12,13 +12,14 @@ import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        webView = (WebView) findViewById(R.id.web);
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        webView = findViewById(R.id.web);
+        final ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
 
         webView.getSettings().setJavaScriptEnabled(true);
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
         webView.loadUrl("https://phometo.com/");
-        final SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeToRefresh);
+        final SwipeRefreshLayout swipeRefreshLayout = findViewById(R.id.swipeToRefresh);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public void onBackPressed() {
         if (webView.canGoBack())
