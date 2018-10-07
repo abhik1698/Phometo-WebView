@@ -2,4 +2,8 @@
     <string name="app_name">PHOMeTO</string>
     <string name="pmf">Preserving Memories Forever</string>
     <string name="welcome">Welcome</string>
+    <string name="seeyou">See you soon...</string>
+    <string name="title_activity_connection_state">ConnectionState</string>
+    <string name="needs">This application needs Internet Connectivity</string>
+    <string name="restart">Restart</string>
 </resources>
