@@ -11,7 +11,6 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
@@ -60,12 +59,11 @@ public class MainActivity extends AppCompatActivity {
         else {
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.btn_radio)
-                    .setTitle("Exit")
+                    .setTitle("Exit Phometo's Application")
                     .setMessage("Are you sure?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this, getString(R.string.seeyou), Toast.LENGTH_SHORT).show();
                             MainActivity.super.onDestroy();
                             finish();
                         }
